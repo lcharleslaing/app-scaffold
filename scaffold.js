@@ -83,8 +83,6 @@ export default async function handler(req) {
 };
 
 // ✅ Snapshot Generator
-const fs = require('fs');
-const path = require('path');
 
 const ignoreDirs = ['node_modules', 'dist', '.git', 'release'];
 const alwaysInclude = ['public', 'js', 'styles', 'vercel', 'htmx', 'assets'];
