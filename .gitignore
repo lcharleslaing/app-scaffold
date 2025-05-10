@@ -1,0 +1,28 @@
+# Node
+node_modules/
+.env
+.DS_Store
+*.log
+
+# System/Editor
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+
+# Snapshots
+snapshots/
+project-snapshot-*.md
+
+# OS
+*.bak
+*.tmp
+*.DS_Store
+
+# Coverage/Test
+coverage/
+*.lcov
+
+# Optional builds/dist (if added later)
+dist/
+build/
