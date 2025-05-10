@@ -1,0 +1,1 @@
+function saveUserSession(user) { localStorage.setItem("user", JSON.stringify(user)); } function logout() { localStorage.removeItem("user"); location.href = "/pages/auth/login.html"; }

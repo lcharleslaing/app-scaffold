@@ -1,0 +1,33 @@
+{
+  "name": "app-scaffold",
+  "version": "1.0.0",
+  "description": "⚡ The ultimate HTMX + Material UI app scaffold. MPA/SPA ready. Offline-first. Serverless-friendly. AI-optimized.",
+  "main": "scaffold.js",
+  "scripts": {
+    "scaffold": "node scaffold.js",
+    "snap": "node generate-snapshot.js",
+    "start": "npm run scaffold && npm run snap"
+  },
+  "keywords": [
+    "htmx",
+    "material-ui",
+    "starter",
+    "scaffold",
+    "vercel",
+    "indexeddb",
+    "cli",
+    "ai-assisted",
+    "web-app",
+    "developer-tools"
+  ],
+  "author": "Lee Charles Laing <lcharleslaing@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leecharleslaing/app-scaffold.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leecharleslaing/app-scaffold/issues"
+  },
+  "homepage": "https://github.com/leecharleslaing/app-scaffold#readme"
+}
