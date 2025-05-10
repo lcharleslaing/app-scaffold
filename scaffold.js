@@ -143,6 +143,30 @@ function generateSnapshot() {
 
 generateSnapshot();
 
+function writeFiles(mode) {
+  console.log('🔧 Creating folders...');
+  dirs.forEach(dir => {
+    const full = path.resolve(dir);
+    if (!fs.existsSync(full)) fs.mkdirSync(full, { recursive: true });
+  });
+
+  console.log('📄 Writing scaffold files...');
+  for (const [filePath, content] of Object.entries(files)) {
+    const fullPath = path.resolve(filePath);
+    if (fs.existsSync(fullPath)) {
+      if (mode === 'overwrite') {
+        fs.writeFileSync(fullPath, content, 'utf8');
+        console.log(`🔁 Overwrote: ${filePath}`);
+      }
+    } else {
+      fs.writeFileSync(fullPath, content, 'utf8');
+      console.log(`✅ Created: ${filePath}`);
+    }
+  }
+
+  console.log(`\n🎉 Project ${mode === 'overwrite' ? 'overwritten' : 'updated'} successfully!`);
+}
+
 
 const checkAndPrompt = () => {
   const alreadyExists = fs.existsSync('public');
