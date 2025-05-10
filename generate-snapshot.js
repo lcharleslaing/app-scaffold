@@ -3,7 +3,7 @@ const path = require('path');
 
 const ignoreDirs = ['node_modules', 'dist', '.git', 'release'];
 const alwaysInclude = ['public', 'js', 'styles', 'vercel', 'htmx', 'assets'];
-const rootFiles = ['README.md', 'generate-snapshot.js'];
+const rootFiles = ['README.md', 'generate-snapshot.js', 'scaffold.js', 'package.json', '.gitignore'];
 
 const now = new Date();
 const date = now.toLocaleDateString('en-US').replace(/\//g, '-'); // MM-DD-YYYY
