@@ -25,12 +25,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/leecharleslaing/app-scaffold.git"
+    "url": "https://github.com/lcharleslaing/app-scaffold.git"
   },
   "bugs": {
-    "url": "https://github.com/leecharleslaing/app-scaffold/issues"
+    "url": "https://github.com/lcharleslaing/app-scaffold/issues"
   },
-  "homepage": "https://github.com/leecharleslaing/app-scaffold#readme",
+  "homepage": "https://github.com/lcharleslaing/app-scaffold#readme",
   "dependencies": {
     "jose": "^5.10.0"
   }
