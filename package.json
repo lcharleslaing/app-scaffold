@@ -6,7 +6,8 @@
   "scripts": {
     "scaffold": "node scaffold.js",
     "snap": "node generate-snapshot.js",
-    "start": "npm run scaffold && npm run snap"
+    "start": "npm run scaffold && npm run snap",
+    "dev": "vercel dev"
   },
   "keywords": [
     "htmx",
@@ -29,5 +30,8 @@
   "bugs": {
     "url": "https://github.com/leecharleslaing/app-scaffold/issues"
   },
-  "homepage": "https://github.com/leecharleslaing/app-scaffold#readme"
+  "homepage": "https://github.com/leecharleslaing/app-scaffold#readme",
+  "dependencies": {
+    "jose": "^5.10.0"
+  }
 }

@@ -1,1 +1,19 @@
 <h2>Login</h2>
+<form id="login-form" hx-post="/api/auth/login" hx-target="#login-msg" hx-swap="innerHTML">
+  <label>Email:<br><input type="email" name="email" required></label><br>
+  <label>Password:<br><input type="password" name="password" required></label><br>
+  <button type="submit">Login</button>
+</form>
+<div id="login-msg"></div>
+<script>
+  document.body.addEventListener('htmx:afterSwap', function (evt) {
+    if (evt.target.id === 'login-msg') {
+      const redirectDiv = evt.target.querySelector('[hx-redirect]');
+      if (redirectDiv) {
+        const url = redirectDiv.getAttribute('hx-redirect');
+        console.log('Redirecting to', url);
+        window.location.href = url;
+      }
+    }
+  });
+</script>

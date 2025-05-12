@@ -1,1 +1,17 @@
 <h2>Register</h2>
+<form id="register-form" hx-post="/api/auth/register" hx-target="#register-msg" hx-swap="innerHTML">
+  <label>Email:<br><input type="email" name="email" required></label><br>
+  <label>Password:<br><input type="password" name="password" required minlength="6"></label><br>
+  <button type="submit">Register</button>
+</form>
+<div id="register-msg"></div>
+<script>
+  document.body.addEventListener('htmx:afterSwap', function (evt) {
+    if (evt.target.id === 'register-msg') {
+      if (evt.target.textContent.includes('Registered successfully')) {
+        console.log('Registration successful, redirecting to login...');
+        setTimeout(() => window.location.href = '/pages/auth/login.html', 1200);
+      }
+    }
+  });
+</script>

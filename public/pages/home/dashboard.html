@@ -1,1 +1,14 @@
+<!-- Protected: This page should only be served if JWT is valid -->
 <h2>Dashboard</h2>
+<button id="logout-btn" hx-post="/api/auth/logout" hx-target="#logout-msg" hx-swap="innerHTML">Logout</button>
+<div id="logout-msg"></div>
+<script>
+  document.body.addEventListener('htmx:afterSwap', function (evt) {
+    if (evt.target.id === 'logout-msg') {
+      if (evt.target.textContent.includes('Logged out')) {
+        console.log('Logged out, redirecting to login...');
+        setTimeout(() => window.location.href = '/pages/auth/login.html', 800);
+      }
+    }
+  });
+</script>
